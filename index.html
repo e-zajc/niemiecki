@@ -535,6 +535,162 @@
             color: #999;
             margin-top: 10px;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+                margin: 0;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .tabs {
+                margin-bottom: 20px;
+                gap: 5px;
+            }
+
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
+            .test-question {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .test-word {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .test-input {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .feedback-message {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .correct-answer-reveal {
+                padding: 12px;
+                margin-top: 12px;
+            }
+
+            .correct-answer-text {
+                font-size: 16px;
+            }
+
+            .button-group {
+                gap: 8px;
+            }
+
+            .btn {
+                min-width: 120px;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            .test-filters {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .filter-option {
+                padding: 12px;
+                font-size: 13px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .stat-box {
+                padding: 15px;
+            }
+
+            .stat-number {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .error-word-card {
+                padding: 12px;
+                margin-bottom: 8px;
+            }
+
+            .error-word {
+                font-size: 14px;
+                margin-bottom: 3px;
+            }
+
+            .hint-text {
+                font-size: 11px;
+            }
+
+            body {
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .streak-number {
+                font-size: 28px;
+            }
+
+            .fire {
+                font-size: 28px;
+            }
+
+            .test-word {
+                font-size: 20px;
+            }
+
+            .test-filters {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                flex: 1;
+                min-width: 45%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -542,7 +698,7 @@
         <div class="header">
             <div>
                 <h1>🇩🇪 Nauka Słówek Niemiecki</h1>
-                <p>Trends neu - Lekcje 1.1 i 1.2</p>
+                <p>Trends neu - Lekcje 1.1 - 1.6</p>
             </div>
             <div class="streak-box">
                 <div class="streak-number">
@@ -585,6 +741,7 @@
 
     <script>
         const vocabulary = [
+            // Lekcja 1.1
             { de: 'Beantworter die Fragen', pl: 'Odpowiadaj na pytania' },
             { de: 'Lies die Texte', pl: 'Czytaj teksty' },
             { de: 'Wer', pl: 'Kto' },
@@ -624,7 +781,87 @@
             { de: 'Welche Form', pl: 'Jaka forma' },
             { de: 'Sprechen', pl: 'Mówić' },
             { de: 'Hören', pl: 'Słuchać' },
-            { de: 'Schreiben', pl: 'Pisać' }
+            { de: 'Schreiben', pl: 'Pisać' },
+            
+            // Lekcja 1.3
+            { de: 'Wie geht es dir?', pl: 'Jak się masz?' },
+            { de: 'Danke', pl: 'Dziękuję' },
+            { de: 'gut', pl: 'dobrze' },
+            { de: 'schlecht', pl: 'źle' },
+            { de: 'super', pl: 'super' },
+            { de: 'toll', pl: 'fajny' },
+            { de: 'fantastisch', pl: 'fantastyczny' },
+            { de: 'prima', pl: 'świetnie' },
+            { de: 'sehr gut', pl: 'bardzo dobrze' },
+            { de: 'nicht besonders gut', pl: 'nie najlepiej' },
+            { de: 'so lala', pl: 'mniej więcej' },
+            { de: 'fatal', pl: 'fatalnie' },
+            { de: 'es geht', pl: 'się ma' },
+            { de: 'Tschüss', pl: 'Cześć' },
+            
+            // Lekcja 1.4
+            { de: 'App', pl: 'aplikacja' },
+            { de: 'Scanner', pl: 'skaner' },
+            { de: 'Poster', pl: 'plakat' },
+            { de: 'Drucker', pl: 'drukarka' },
+            { de: 'kommentieren', pl: 'komentować' },
+            { de: 'Cloud', pl: 'chmura' },
+            { de: 'liken', pl: 'lubić' },
+            { de: 'Router', pl: 'router' },
+            { de: 'downloaden', pl: 'pobierać' },
+            { de: 'Cursor', pl: 'kursor' },
+            { de: 'Link', pl: 'link' },
+            { de: 'kopieren', pl: 'kopiować' },
+            { de: 'filtern', pl: 'filtrować' },
+            { de: 'Mail', pl: 'mail' },
+            { de: 'bedeuten', pl: 'znaczyć' },
+            
+            // Lekcja 1.5
+            { de: 'Hobby', pl: 'hobby' },
+            { de: 'interessant', pl: 'interesujący' },
+            { de: 'Musik', pl: 'muzyka' },
+            { de: 'Sport', pl: 'sport' },
+            { de: 'Computerspiele', pl: 'gry komputerowe' },
+            { de: 'Technik', pl: 'technika' },
+            { de: 'Bern', pl: 'Berno' },
+            { de: 'Wien', pl: 'Wiedeń' },
+            { de: 'Paris', pl: 'Paryż' },
+            { de: 'Rom', pl: 'Rzym' },
+            { de: 'Madrid', pl: 'Madryt' },
+            { de: 'Frankreich', pl: 'Francja' },
+            { de: 'Österreich', pl: 'Austria' },
+            { de: 'die Schweiz', pl: 'Szwajcaria' },
+            { de: 'Deutschland', pl: 'Niemcy' },
+            { de: 'London', pl: 'Londyn' },
+            
+            // Lekcja 1.6
+            { de: 'Wie heißt du?', pl: 'Jak się nazywasz?' },
+            { de: 'Wo wohnst du?', pl: 'Gdzie mieszkasz?' },
+            { de: 'Wie geht\'s?', pl: 'Jak się masz?' },
+            { de: 'Hauptstadt', pl: 'stolica' },
+            { de: 'cool', pl: 'fajnie' },
+            { de: 'Computerfan', pl: 'fan komputerów' },
+            { de: 'Fußball', pl: 'piłka nożna' },
+            { de: 'lustig', pl: 'zabawnie' },
+            { de: 'sympathisch', pl: 'sympatyczny' },
+            
+            // Dodatkowe z dialogów
+            { de: 'Ich heiße', pl: 'Jestem' },
+            { de: 'Woher kommst du?', pl: 'Skąd jesteś?' },
+            { de: 'Ich bin aus', pl: 'Jestem z' },
+            { de: 'Das ist meine Gruppe', pl: 'To jest moja grupa' },
+            { de: 'Und du?', pl: 'A ty?' },
+            { de: 'Leider', pl: 'Niestety' },
+            { de: 'Es geht dir?', pl: 'Jak ci się powodzi?' },
+            { de: 'Reisen', pl: 'podróżowanie' },
+            { de: 'Was machst du?', pl: 'Co robisz?' },
+            { de: 'Was ist dein Hobby?', pl: 'Jakie jest twoje hobby?' },
+            { de: 'Mein Hobby ist', pl: 'Moje hobby to' },
+            { de: 'Hit', pl: 'hit piosenki' },
+            { de: 'Lieder', pl: 'piosenki' },
+            { de: 'nicht so gut', pl: 'nie najlepiej' },
+            { de: 'Es geht', pl: 'Jest dobrze' },
+            { de: 'Erzählen', pl: 'opowiadać' }
         ];
 
         let wordErrors = {};
